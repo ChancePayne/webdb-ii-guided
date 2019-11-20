@@ -6,7 +6,13 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "init": "knex init"
+    "init": "knex init",
+
+    "migrate": "knex migrate:make add_goose_color",
+    "update": "knex migrate:latest",
+
+    "seed": "knex seed:make 001-geese",
+    "runseed": "knex seed:run"
   },
   "repository": {
     "type": "git",
